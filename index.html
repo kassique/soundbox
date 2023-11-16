@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="./assets/icon-logo.ico">
+    <title>SoundBox</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <div id="loader" class="loader"> <!--Animação durante o carregamento da página-->
+        <div class="circle"></div>
+    </div>
+    <div id="app-container">
+        <div class="sidebar"> <!--Seção 'sidebar' contendo logotipo, lista de links e lista de músicas-->
+            <div class="logo">
+                <a href="index.html"><img src="./assets/svg/desktop-logo.svg" class="desktop-logo"></a>
+                <a href="index.html"><img src="./assets/svg/mobile-logo.svg" class="mobile-logo"></a>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-item active">
+                    <i class="fa-regular fa-circle-play sidebar-item-icon"></i>
+                    <p class="sidebar-item-text">Playlist</p>
+                </li>
+                <li class="sidebar-item">
+                    <i class="fa-regular fa-clock sidebar-item-icon"></i>
+                    <p class="sidebar-item-text">Recentes</p>
+                </li>
+                <li class="sidebar-item">
+                    <i class="fa-regular fa-circle-right sidebar-item-icon"></i>
+                    <p class="sidebar-item-text">Recomendados</p>
+                </li>
+            </ul>
+            <ul class="song-list">
+                <li class="song-item">
+                    <span id="1" class="click"></span>
+                    <div class="img-box1">
+                        <img src="./assets/cover1.jpg" class="song-item-img">
+                    </div>
+                    <div class="song-info left">
+                        <p class="song-title">Little Wing</p>
+                        <p class="song-subtitle">Jimi Hendrix</p>
+                    </div>
+                    <i class="fa-solid fa-circle-play song-item-icon"></i>
+                </li>
+                <li class="song-item">
+                    <span id="2" class="click"></span>
+                    <div class="img-box1">
+                        <img src="./assets/cover2.jpg" class="song-item-img">
+                    </div>
+                    <div class="song-info left">
+                        <p class="song-title">How Many More Times</p>
+                        <p class="song-subtitle">Led Zeppelin</p>
+                    </div>
+                    <i class="fa-solid fa-circle-play song-item-icon"></i>
+                </li>
+                <li class="song-item">
+                    <span id="3" class="click"></span>
+                    <div class="img-box1">
+                        <img src="./assets/cover3.jpg" class="song-item-img">
+                    </div>
+                    <div class="song-info left">
+                        <p class="song-title">A Cultura</p>
+                        <p class="song-subtitle">Sabotage</p>
+                    </div>
+                    <i class="fa-solid fa-circle-play song-item-icon"></i>
+                </li>
+                <li class="song-item">
+                    <span id="4" class="click"></span>
+                    <div class="img-box1">
+                        <img src="./assets/cover4.jpg" class="song-item-img">
+                    </div>
+                    <div class="song-info left">
+                        <p class="song-title">Menina Mulher da Pele Preta</p>
+                        <p class="song-subtitle">Jorge Ben Jor</p>
+                    </div>
+                    <i class="fa-solid fa-circle-play song-item-icon"></i>
+                </li>
+                <li class="song-item">
+                    <span id="5" class="click"></span>
+                    <div class="img-box1">
+                        <img src="./assets/cover5.jpg" class="song-item-img">
+                    </div>
+                    <div class="song-info left">
+                        <p class="song-title">The Thrill is Gone</p>
+                        <p class="song-subtitle">B.B. King</p>
+                    </div>
+                    <i class="fa-solid fa-circle-play song-item-icon"></i>
+                </li>
+            </ul>
+        </div>
+        <div class="discover"> <!--Seção 'discover' contendo navbar responsiva, lista de músicas e lista de artistas-->
+            <nav class="navbar">
+                <ul class="navbar-list">
+                    <li class="navbar-item">Descoberta</li>
+                    <li class="navbar-item">Biblioteca</li>
+                    <li class="navbar-item">Mixes</li>
+                </ul>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" placeholder="Pesquisar" class="search-input">
+                </div>
+                <div class="navbar-left">
+                    <i class="fa-solid fa-circle-user navbar-btn"></i>
+                    <div class="hamburger">
+                        <i class="fa-solid fa-bars hamburger-btn"></i>
+                        <i class="fa-solid fa-circle-xmark hamburger-btn"></i>
+                    </div>
+                </div>
+            </nav>
+            <div class="discover-content">
+                <h1 class="title">Jimi Hendrix</h1>
+                <p class="text">
+                    Jimi Hendrix foi um lendário guitarrista, cantor e compositor de rock que revolucionou a música nos anos 1960.
+                </p>
+                <div class="discover-buttons">
+                    <button class="discover-btn">Tocar</button>
+                    <button class="discover-btn">Seguir</button>
+                </div>
+            </div>
+            <div class="popular-song">
+                <p class="popular-song-text">Músicas Populares</p>
+                <div class="popular-song-buttons">
+                    <i id="left-scroll1" class="fa-solid fa-arrow-left popular-song-btn"></i>
+                    <i id="right-scroll1" class="fa-solid fa-arrow-right popular-song-btn"></i>
+                </div>
+            </div>
+            <ul class="popular-song-list">
+                <li class="popular-song-item">
+                    <span id="6" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover6.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">I Want You</p>
+                        <p class="song-subtitle right">The Beatles</p>
+                    </div>
+                </li>
+                <li class="popular-song-item">
+                    <span id="7" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover7.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">Capítulo 4, Versículo 3</p>
+                        <p class="song-subtitle right">Racionais MCs</p>
+                    </div>
+                </li>
+                <li class="popular-song-item">
+                    <span id="8" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover8.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">Samurai (feat. Stevie Wonder)</p>
+                        <p class="song-subtitle right">Djavan, Stevie Wonder</p>
+                    </div>
+                </li>
+                <li class="popular-song-item">
+                    <span id="9" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover9.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">Remember the Time</p>
+                        <p class="song-subtitle right">Michael Jackson</p>
+                    </div>
+                </li>
+                <li class="popular-song-item">
+                    <span id="10" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover10.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">Take the Power Back</p>
+                        <p class="song-subtitle right">Rage Against the Machine</p>
+                    </div>
+                </li>
+                <li class="popular-song-item">
+                    <span id="11" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover11.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">Champanhe e Água Benta</p>
+                        <p class="song-subtitle right">Charlie Brown Jr.</p>
+                    </div>
+                </li>
+                <li class="popular-song-item">
+                    <span id="12" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover12.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">Who Dat Boy (feat. A$AP Rocky)</p>
+                        <p class="song-subtitle right">Tyler, The Creator, A$AP Rocky</p>
+                    </div>
+                </li>
+                <li class="popular-song-item">
+                    <span id="13" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover13.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">Esquimó</p>
+                        <p class="song-subtitle right">Djonga</p>
+                    </div>
+                </li>
+                <li class="popular-song-item">
+                    <span id="14" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover14.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">Money Trees</p>
+                        <p class="song-subtitle right">Kendrick Lamar</p>
+                    </div>
+                </li>
+                <li class="popular-song-item">
+                    <span id="15" class="click"></span>
+                    <div class="img-box2">
+                        <img src="./assets/cover15.jpg" class="popular-song-item-img">
+                        <i class="fa-solid fa-circle-play popular-song-item-icon"></i>
+                    </div>
+                    <div class="song-info right">
+                        <p class="song-title right">Jamming</p>
+                        <p class="song-subtitle right">Bob Marley & The Wailers</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="popular-song">
+                <p class="popular-song-text">Artistas Populares</p>
+                <div class="popular-song-buttons">
+                    <i id="left-scroll2" class="fa-solid fa-arrow-left popular-song-btn"></i>
+                    <i id="right-scroll2" class="fa-solid fa-arrow-right popular-song-btn"></i>
+                </div>
+            </div>
+            <ul class="popular-artists-list">
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img1.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img2.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img3.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img4.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img5.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img6.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img7.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img8.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img9.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img10.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img11.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img12.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img13.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img14.jpg" class="popular-artists-item-img">
+                </li>
+                <li class="popular-artists-item">
+                    <img src="./assets/popular-artists-item-img15.jpg" class="popular-artists-item-img">
+                </li>
+            </ul>
+        </div>
+        <div class="masterplay"> <!--Seção 'masterplay' contendo animação, informações da musica atual, controles de reprodução e volume-->
+            <div class="masterplay-left">
+                <div class="soundwave">
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                </div>
+                <div class="img-box1 bottom">
+                    <img src="./assets/cover1.jpg" id="masterplay-img" class="song-item-img">
+                </div>
+                <div class="song-info bottom">
+                    <p id="song-title" class="song-title">Little Wing</p>
+                    <p id="song-subtitle" class="song-subtitle">Jimi Hendrix</p>
+                </div>
+            </div>
+            <div class="masterplay-right">
+                <div class="controls">
+                    <i id="back" class="fa-solid fa-backward controls-btn"></i>
+                    <i id="play" class="fa-solid fa-play controls-btn"></i>
+                    <i id="next" class="fa-solid fa-forward controls-btn"></i>
+                </div>
+                <div class="timer">
+                    <span id="current-start">00:00</span>
+                    <div class="timer-bar">
+                        <input type="range" min="0" value="0" max="100" id="timer-bar-input">
+                        <div id="bar1"></div>
+                    </div>
+                    <span id="current-end">00:00</span>
+                </div>
+                <div class="volume">
+                    <i id="volume-btn" class="fa-solid fa-volume-high volume-btn"></i>
+                    <div class="volume-bar">
+                        <input type="range" min="0" value="100" max="100" id="volume-bar-input">
+                        <div id="bar2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="login"> <!--Popup contendo formulário de login e cadastro-->
+        <div class="login-container">
+            <i class="fa-solid fa-circle-xmark login-btn-close"></i>
+            <div class="login-box login">
+                <div class="login-box-top">
+                    <img src="./assets/svg/mobile-logo.svg" class="login-logo">
+                    <h1 class="login-title">Login.</h1>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-envelope login-icon"></i>
+                    <input type="mail" required class="login-input">
+                    <label class="login-label">Email</label>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-key login-icon"></i>
+                    <input type="password" required class="login-input">
+                    <label class="login-label">Senha</label>
+                </div>
+                <div class="forgot-password">
+                    <a href="#" class="forgot-password-link">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+                <div class="login-register">
+                    <p class="login-register-text">Ainda não pussui uma conta?
+                        <a href="#" class="register-link">Cadastre-se</a>
+                    </p>
+                </div>
+            </div>
+            <div class="login-box register">
+                <div class="login-box-top">
+                    <img src="./assets/svg/mobile-logo.svg" class="login-logo">
+                    <h1 class="login-title">Cadastro.</h1>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-circle-user login-icon"></i>
+                    <input type="text" required class="login-input">
+                    <label class="login-label">Nome de usuário</label>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-envelope login-icon"></i>
+                    <input type="mail" required class="login-input">
+                    <label class="login-label">Email</label>
+                </div>
+                <div class="login-form">
+                    <i class="fa-solid fa-key login-icon"></i>
+                    <input type="password" required class="login-input">
+                    <label class="login-label">Senha</label>
+                </div>
+                <div class="forgot-password">
+                    <label class="forgot-password-label">
+                        <input type="checkbox" class="forgot-password-input">Aceito os termos de uso
+                    </label>
+                </div>
+                <button type="submit" class="login-btn">Cadastrar</button>
+                <div class="login-register">
+                    <p class="login-register-text">Já possui uma conta?
+                        <a href="#" class="login-link">Faça login</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/57019a9767.js" crossorigin="anonymous"></script>
+</body>
+</html>
